@@ -14,7 +14,8 @@ polygon = PackedVector2Array(-2560, -24, -2560, 24, 2560, 24, 2560, -24)
 shape = SubResource("RectangleShape2D_4omri")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(5120, 48)
+position = Vector2(-0.000305176, 0)
+scale = Vector2(5118, 46)
 texture = SubResource("PlaceholderTexture2D_rbg5j")
 
 [node name="LightOccluder" type="LightOccluder2D" parent="."]

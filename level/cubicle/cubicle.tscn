@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bi043bm5mv5ha"]
+[gd_scene load_steps=4 format=3 uid="uid://bi043bm5mv5ha"]
 
 [ext_resource type="PackedScene" uid="uid://cxgq3fwh2xlx8" path="res://level/cubicle/cubicle_wall.tscn" id="1_enag8"]
 [ext_resource type="PackedScene" uid="uid://btrjht473oat0" path="res://level/cubicle/cubicle_door.tscn" id="2_3u8xl"]
+[ext_resource type="PackedScene" uid="uid://n02ib1jxpfgg" path="res://level/cubicle/table.tscn" id="3_hqmwc"]
 
 [node name="Cubicle" type="Node2D"]
 
@@ -17,4 +18,8 @@ position = Vector2(0, 312)
 
 [node name="CubicleDoor" parent="." instance=ExtResource("2_3u8xl")]
 position = Vector2(312, 0)
+rotation = 1.57079
+
+[node name="Table" parent="." instance=ExtResource("3_hqmwc")]
+position = Vector2(-208, 0)
 rotation = 1.57079

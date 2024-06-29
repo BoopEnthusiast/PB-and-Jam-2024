@@ -54,5 +54,5 @@ position = Vector2(640, 2528)
 rotation = -3.14159
 
 [node name="CubicleRow4" parent="Level1/Cubicles" instance=ExtResource("4_7pjao")]
-position = Vector2(1472, 2528)
+position = Vector2(1264, 2528)
 rotation = -6.28318

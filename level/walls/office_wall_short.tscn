@@ -15,7 +15,7 @@ shape = SubResource("RectangleShape2D_2cdps")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(-2.3365e-05, 1.66893e-06)
-scale = Vector2(640, 48)
+scale = Vector2(638, 46)
 texture = SubResource("PlaceholderTexture2D_tmun6")
 
 [node name="LightOccluder" type="LightOccluder2D" parent="."]

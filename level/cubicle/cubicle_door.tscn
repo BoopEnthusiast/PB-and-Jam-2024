@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_7slth")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(-192, -2.68221e-07)
-scale = Vector2(256, 16)
+scale = Vector2(254, 14)
 texture = SubResource("PlaceholderTexture2D_ve370")
 
 [node name="Collider2" type="CollisionShape2D" parent="."]
@@ -27,8 +27,8 @@ position = Vector2(192, 0)
 shape = SubResource("RectangleShape2D_7slth")
 
 [node name="Sprite2" type="Sprite2D" parent="."]
-position = Vector2(192, -2.68221e-07)
-scale = Vector2(256, 16)
+position = Vector2(192, 1.19209e-07)
+scale = Vector2(254, 14)
 texture = SubResource("PlaceholderTexture2D_ve370")
 
 [node name="LightOccluder" type="LightOccluder2D" parent="."]
