@@ -13,6 +13,7 @@ agent_radius = 30.0
 
 [node name="NavMesh" type="NavigationRegion2D"]
 navigation_polygon = SubResource("NavigationPolygon_mjlwa")
+constrain_avoidance = true
 
 [node name="Level1" type="Node2D" parent="."]
 
