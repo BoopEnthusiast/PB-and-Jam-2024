@@ -41,3 +41,91 @@ shape = SubResource("CircleShape2D_7mquu")
 
 [node name="Popup" type="CanvasLayer" parent="."]
 layer = 2
+
+[node name="Phone" type="ColorRect" parent="Popup"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.062
+anchor_right = 0.653
+anchor_bottom = 0.938
+offset_left = 0.255981
+offset_top = -0.176003
+offset_right = -0.256042
+offset_bottom = 0.175964
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PhoneText" type="RichTextLabel" parent="Popup/Phone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = -32.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Placeholder textllalalalalla
+ 
+alal lalalal ofksjdfgjkh sdfjghklsdfjhgkljsdfhgklfjsdfklgjh jkg klsdfgjhkl jhgklj jklg jklsdfg jklghlsdjhglk jhdfklgj hldfkg 
+fgsfgj h
+g sjs
+s
+fgjhkl s
+
+gsdfh kl;gjh  jkgklsf l;; s;' ;;' 'sg' d 
+
+fdguihsdfjgh fjkf jf jklslkj  dhjjfj j j j j j jf jfj jklfhdj d flsdkdasfhklg
+ df
+gsdf
+g 
+dfs jsh kljh gsdf
+ "
+
+[node name="Paper" type="ColorRect" parent="Popup"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.062
+anchor_right = 0.653
+anchor_bottom = 0.938
+offset_left = 0.255981
+offset_top = -0.176003
+offset_right = -0.256042
+offset_bottom = 0.175964
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaperText" type="RichTextLabel" parent="Popup/Paper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = -32.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Placeholder textllalalalalla
+ 
+alal lalalal ofksjdfgjkh sdfjghklsdfjhgkljsdfhgklfjsdfklgjh jkg klsdfgjhkl jhgklj jklg jklsdfg jklghlsdjhglk jhdfklgj hldfkg 
+fgsfgj h
+g sjs
+s
+fgjhkl s
+
+gsdfh kl;gjh  jkgklsf l;; s;' ;;' 'sg' d 
+
+fdguihsdfjgh fjkf jf jklslkj  dhjjfj j j j j j jf jfj jklfhdj d flsdkdasfhklg
+ df
+gsdf
+g 
+dfs jsh kljh gsdf
+ "
