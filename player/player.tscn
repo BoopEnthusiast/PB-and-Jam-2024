@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bxhu2r4fgpj36"]
 
-[ext_resource type="Script" path="res://player/PlayerCharacter.gd" id="1_ctjpp"]
+[ext_resource type="Script" path="res://player/Player.gd" id="1_ctjpp"]
 [ext_resource type="Texture2D" uid="uid://cd503qv873xgh" path="res://resources/2d_lights_and_shadows_neutral_point_light.webp" id="2_shlhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbe17"]
@@ -8,6 +8,7 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f054q"]
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_ctjpp")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
