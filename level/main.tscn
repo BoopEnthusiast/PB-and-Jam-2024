@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp5j8o8dln7i0"]
+[gd_scene load_steps=6 format=3 uid="uid://bp5j8o8dln7i0"]
 
 [ext_resource type="PackedScene" uid="uid://dynuwduuqgb1e" path="res://level/level_1.tscn" id="1_ldu7f"]
-[ext_resource type="PackedScene" uid="uid://bxhu2r4fgpj36" path="res://player/player.tscn" id="2_v1ojs"]
+[ext_resource type="PackedScene" uid="uid://bxhu2r4fgpj36" path="res://characters/player.tscn" id="2_v1ojs"]
+[ext_resource type="PackedScene" uid="uid://dfjcyfyvwyent" path="res://characters/npc.tscn" id="3_pr2pk"]
 
 [sub_resource type="Gradient" id="Gradient_hel4l"]
 offsets = PackedFloat32Array(0, 0.783133, 0.933735, 1)
@@ -25,3 +26,5 @@ position = Vector2(374, 429)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.525101, 0.525101, 0.525101, 1)
+
+[node name="NPC" parent="." instance=ExtResource("3_pr2pk")]
