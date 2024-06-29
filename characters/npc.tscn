@@ -8,6 +8,7 @@ size = Vector2(48, 48)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_knhqf"]
 
 [node name="NPC" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_ocuyg")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
@@ -21,5 +22,8 @@ texture = SubResource("PlaceholderTexture2D_knhqf")
 path_desired_distance = 5.0
 target_desired_distance = 2.5
 avoidance_enabled = true
-radius = 30.0
-debug_enabled = true
+radius = 35.0
+max_speed = 125.0
+
+[connection signal="navigation_finished" from="NavAgent" to="." method="_on_navigation_finished"]
+[connection signal="velocity_computed" from="NavAgent" to="." method="_on_velocity_computed"]

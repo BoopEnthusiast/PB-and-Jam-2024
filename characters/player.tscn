@@ -26,3 +26,7 @@ position_smoothing_enabled = true
 scale = Vector2(5.25, 5.25)
 shadow_enabled = true
 texture = ExtResource("2_shlhq")
+
+[node name="NavObstacle" type="NavigationObstacle2D" parent="."]
+radius = 45.0
+vertices = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
