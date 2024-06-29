@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxhu2r4fgpj36"]
+[gd_scene load_steps=6 format=3 uid="uid://bxhu2r4fgpj36"]
 
 [ext_resource type="Script" path="res://characters/Player.gd" id="1_ctjpp"]
 [ext_resource type="Texture2D" uid="uid://cd503qv873xgh" path="res://resources/2d_lights_and_shadows_neutral_point_light.webp" id="2_shlhq"]
@@ -7,6 +7,9 @@
 size = Vector2(64, 64)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f054q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7mquu"]
+radius = 72.0
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -30,3 +33,8 @@ texture = ExtResource("2_shlhq")
 [node name="NavObstacle" type="NavigationObstacle2D" parent="."]
 radius = 45.0
 vertices = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="Collider" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_7mquu")
