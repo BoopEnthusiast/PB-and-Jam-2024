@@ -5,3 +5,8 @@
 [node name="Cubicle" type="Node2D"]
 
 [node name="CubicleWall" parent="." instance=ExtResource("1_enag8")]
+position = Vector2(0, -304)
+
+[node name="CubicleWall2" parent="." instance=ExtResource("1_enag8")]
+position = Vector2(-304, 0)
+rotation = 1.57079

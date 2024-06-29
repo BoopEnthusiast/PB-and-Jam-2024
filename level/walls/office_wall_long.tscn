@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://byrlfo2npkw8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4omri"]
-size = Vector2(5156, 38)
+size = Vector2(5120, 48)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rbg5j"]
 
@@ -11,5 +11,5 @@ size = Vector2(5156, 38)
 shape = SubResource("RectangleShape2D_4omri")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(5156, 38)
+scale = Vector2(5120, 48)
 texture = SubResource("PlaceholderTexture2D_rbg5j")
