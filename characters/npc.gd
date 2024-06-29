@@ -5,6 +5,8 @@ const SPEED = 100.0
 
 var ready_to_move := false
 
+var last_position: Vector2
+
 @onready var nav_agent = $NavAgent
 
 
@@ -39,3 +41,9 @@ func _on_navigation_finished():
 
 func _on_velocity_computed(safe_velocity):
 	velocity = safe_velocity
+
+
+func _on_move_check_timeout():
+	if last_position and last_position.distance_squared_to(global_position) < 500:
+		nav_agent.target_position = Singleton.random_point()
+	last_position = global_position

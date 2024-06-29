@@ -30,7 +30,7 @@ color = Color(0.525101, 0.525101, 0.525101, 1)
 [node name="NPCs" type="Node2D" parent="."]
 
 [node name="NPC" parent="NPCs" instance=ExtResource("3_pr2pk")]
-position = Vector2(-88, 736)
+position = Vector2(-336, 792)
 
 [node name="NPC2" parent="NPCs" instance=ExtResource("3_pr2pk")]
 position = Vector2(640, 1472)
