@@ -38,3 +38,6 @@ vertices = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
 
 [node name="Collider" type="CollisionShape2D" parent="InteractArea"]
 shape = SubResource("CircleShape2D_7mquu")
+
+[node name="Popup" type="CanvasLayer" parent="."]
+layer = 2
