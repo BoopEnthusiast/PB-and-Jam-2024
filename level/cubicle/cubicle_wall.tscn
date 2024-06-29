@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxgq3fwh2xlx8"]
+[gd_scene load_steps=4 format=3 uid="uid://cxgq3fwh2xlx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4okvd"]
 size = Vector2(640, 16)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cua6q"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_asqai"]
+polygon = PackedVector2Array(-320, -8, -320, 8, 320, 8, 320, -8)
 
 [node name="CubicleWall" type="StaticBody2D"]
 
@@ -14,3 +17,6 @@ shape = SubResource("RectangleShape2D_4okvd")
 position = Vector2(1.85967e-05, -2.68221e-07)
 scale = Vector2(640, 16)
 texture = SubResource("PlaceholderTexture2D_cua6q")
+
+[node name="LightOccluder" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_asqai")

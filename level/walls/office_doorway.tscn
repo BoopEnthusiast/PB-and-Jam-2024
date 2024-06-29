@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhpx3awswnuwk"]
+[gd_scene load_steps=5 format=3 uid="uid://dhpx3awswnuwk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ancwb"]
 size = Vector2(256, 48)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dxgmp"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y3ifb"]
+polygon = PackedVector2Array(-320, -24, -64, -24, -64, 24, -320, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_igmjx"]
+polygon = PackedVector2Array(64, -24, 320, -24, 320, 24, 64, 24)
 
 [node name="OfficeDoorway" type="StaticBody2D"]
 
@@ -24,3 +30,9 @@ shape = SubResource("RectangleShape2D_ancwb")
 position = Vector2(192, 1.66893e-06)
 scale = Vector2(256, 48)
 texture = SubResource("PlaceholderTexture2D_dxgmp")
+
+[node name="LightOccluder" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_y3ifb")
+
+[node name="LightOccluder2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_igmjx")
