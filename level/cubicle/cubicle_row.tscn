@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdhr6sip8usbh"]
+
+[ext_resource type="PackedScene" uid="uid://bi043bm5mv5ha" path="res://level/cubicle/cubicle.tscn" id="1_3y5l6"]
+
+[node name="CubicleRow" type="Node2D"]
+position = Vector2(-1088, 2504)
+
+[node name="Cubicle" parent="." instance=ExtResource("1_3y5l6")]
+position = Vector2(0, -416)
+
+[node name="Cubicle2" parent="." instance=ExtResource("1_3y5l6")]
+position = Vector2(0, 416)
+
+[node name="Cubicle3" parent="." instance=ExtResource("1_3y5l6")]
+position = Vector2(0, -1040)
+
+[node name="Cubicle4" parent="." instance=ExtResource("1_3y5l6")]
+position = Vector2(0, -1664)
+
+[node name="Cubicle5" parent="." instance=ExtResource("1_3y5l6")]
+position = Vector2(0, 1040)
+
+[node name="Cubicle6" parent="." instance=ExtResource("1_3y5l6")]
+position = Vector2(0, 1664)

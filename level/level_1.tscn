@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://byrlfo2npkw8e" path="res://level/walls/office_wall_long.tscn" id="1_gvxh8"]
 [ext_resource type="PackedScene" uid="uid://bw46yxaggedff" path="res://level/walls/office_wall_short.tscn" id="2_74myi"]
 [ext_resource type="PackedScene" uid="uid://dhpx3awswnuwk" path="res://level/walls/office_doorway.tscn" id="4_1g5nm"]
-[ext_resource type="PackedScene" uid="uid://bi043bm5mv5ha" path="res://level/cubicle/cubicle.tscn" id="4_4epeu"]
+[ext_resource type="PackedScene" uid="uid://bdhr6sip8usbh" path="res://level/cubicle/cubicle_row.tscn" id="4_7pjao"]
 
 [node name="Level1" type="Node2D"]
 
@@ -13,8 +13,6 @@ rotation = 1.5708
 
 [node name="OfficeDoorway" parent="." instance=ExtResource("4_1g5nm")]
 position = Vector2(-2240, 616)
-
-[node name="Cubicle" parent="." instance=ExtResource("4_4epeu")]
 
 [node name="LongWalls" type="Node2D" parent="."]
 
@@ -32,3 +30,20 @@ rotation = -3.14159
 [node name="OfficeWallLong4" parent="LongWalls" instance=ExtResource("1_gvxh8")]
 position = Vector2(-2536, 2560)
 rotation = -1.5708
+
+[node name="Cubicles" type="Node2D" parent="."]
+
+[node name="CubicleRow" parent="Cubicles" instance=ExtResource("4_7pjao")]
+position = Vector2(-1088, 2528)
+
+[node name="CubicleRow2" parent="Cubicles" instance=ExtResource("4_7pjao")]
+position = Vector2(-256, 2528)
+rotation = -3.14159
+
+[node name="CubicleRow3" parent="Cubicles" instance=ExtResource("4_7pjao")]
+position = Vector2(640, 2528)
+rotation = -3.14159
+
+[node name="CubicleRow4" parent="Cubicles" instance=ExtResource("4_7pjao")]
+position = Vector2(1472, 2528)
+rotation = -6.28318
