@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi043bm5mv5ha"]
+
+[ext_resource type="PackedScene" uid="uid://cxgq3fwh2xlx8" path="res://level/cubicle/cubicle_wall.tscn" id="1_enag8"]
+
+[node name="Cubicle" type="Node2D"]
+
+[node name="CubicleWall" parent="." instance=ExtResource("1_enag8")]

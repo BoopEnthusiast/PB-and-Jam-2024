@@ -1,25 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://dynuwduuqgb1e"]
+[gd_scene load_steps=5 format=3 uid="uid://dynuwduuqgb1e"]
 
 [ext_resource type="PackedScene" uid="uid://byrlfo2npkw8e" path="res://level/walls/office_wall_long.tscn" id="1_gvxh8"]
 [ext_resource type="PackedScene" uid="uid://bw46yxaggedff" path="res://level/walls/office_wall_short.tscn" id="2_74myi"]
-[ext_resource type="PackedScene" uid="uid://cxgq3fwh2xlx8" path="res://level/walls/cubicle_wall.tscn" id="3_cgsxw"]
+[ext_resource type="PackedScene" uid="uid://dhpx3awswnuwk" path="res://level/walls/office_doorway.tscn" id="4_1g5nm"]
+[ext_resource type="PackedScene" uid="uid://bi043bm5mv5ha" path="res://level/cubicle/cubicle.tscn" id="4_4epeu"]
 
 [node name="Level1" type="Node2D"]
 
 [node name="OfficeWallLong" parent="." instance=ExtResource("1_gvxh8")]
 
 [node name="OfficeWallShort" parent="." instance=ExtResource("2_74myi")]
-
-[node name="CubicleWall" parent="." instance=ExtResource("3_cgsxw")]
+position = Vector2(-1984, 288)
+rotation = 1.5708
 
 [node name="OfficeWallLong2" parent="." instance=ExtResource("1_gvxh8")]
-position = Vector2(2559, 2559)
+position = Vector2(2560, 2560)
 rotation = 1.5708
 
 [node name="OfficeWallLong3" parent="." instance=ExtResource("1_gvxh8")]
-position = Vector2(0, 5118)
+position = Vector2(0, 5120)
 rotation = 3.14159
 
 [node name="OfficeWallLong4" parent="." instance=ExtResource("1_gvxh8")]
-position = Vector2(-2559, 2558)
+position = Vector2(-2560, 2560)
 rotation = 4.71239
+
+[node name="OfficeDoorway" parent="." instance=ExtResource("4_1g5nm")]
+position = Vector2(-2272, 576)
+
+[node name="Cubicle" parent="." instance=ExtResource("4_4epeu")]
