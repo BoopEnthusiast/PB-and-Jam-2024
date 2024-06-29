@@ -13,3 +13,7 @@ config_version=5
 config/name="PB & Jam 2024"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Singleton="*res://global/singleton.gd"
