@@ -1,9 +1,16 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
-var SPEED = 400
+
+const SPEED = 400
+const ACCEL = SPEED / 3
+const DECEL = ACCEL / 2
+
 
 func _physics_process(delta):
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = direction * SPEED
+	var direction = Input.get_vector("left", "right", "up", "down")
+	if direction:
+		velocity = velocity.move_toward(direction * SPEED, ACCEL)
+	else:
+		velocity = velocity.move_toward(Vector2.ZERO, DECEL)
 	
 	move_and_slide()
