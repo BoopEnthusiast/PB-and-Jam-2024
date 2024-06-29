@@ -1,9 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfjcyfyvwyent"]
+[gd_scene load_steps=5 format=3 uid="uid://dfjcyfyvwyent"]
 
 [ext_resource type="Script" path="res://characters/npc.gd" id="1_ocuyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vvubd"]
 size = Vector2(48, 48)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g35gc"]
+light_mode = 2
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_knhqf"]
 
@@ -15,6 +18,7 @@ script = ExtResource("1_ocuyg")
 shape = SubResource("RectangleShape2D_vvubd")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_g35gc")
 scale = Vector2(48, 48)
 texture = SubResource("PlaceholderTexture2D_knhqf")
 
