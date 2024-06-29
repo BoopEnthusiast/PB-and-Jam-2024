@@ -7,6 +7,8 @@ var ready_to_move := false
 
 var last_position: Vector2
 
+var doing_thing: Node2D
+
 @onready var nav_agent = $NavAgent
 
 
@@ -28,6 +30,8 @@ func _physics_process(_delta):
 	if not ready_to_move:
 		return
 	
+	
+	
 	var current_agent_position: Vector2 = global_position
 	var next_path_position: Vector2 = nav_agent.get_next_path_position()
 	
@@ -36,6 +40,9 @@ func _physics_process(_delta):
 
 
 func _on_navigation_finished():
+	if doing_thing:
+		nav_agent.target_position = doing_thing.global_position
+		return
 	nav_agent.target_position = Singleton.random_point()
 
 
@@ -47,3 +54,13 @@ func _on_move_check_timeout():
 	if last_position and last_position.distance_squared_to(global_position) < 500:
 		nav_agent.target_position = Singleton.random_point()
 	last_position = global_position
+
+
+func _on_interaction_area_body_entered(body):
+	pass
+
+
+func _on_interaction_area_area_entered(area):
+	if area is Paper:
+		doing_thing = area
+		nav_agent.target_position = area.global_position

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfjcyfyvwyent"]
+[gd_scene load_steps=6 format=3 uid="uid://dfjcyfyvwyent"]
 
 [ext_resource type="Script" path="res://characters/npc.gd" id="1_ocuyg"]
 
@@ -9,6 +9,9 @@ size = Vector2(48, 48)
 light_mode = 2
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_knhqf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t28vq"]
+radius = 96.3328
 
 [node name="NPC" type="CharacterBody2D"]
 motion_mode = 1
@@ -33,6 +36,21 @@ max_speed = 125.0
 process_callback = 0
 autostart = true
 
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="Collider" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_t28vq")
+
+[node name="WallThere" type="RayCast2D" parent="."]
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="ActionTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
 [connection signal="navigation_finished" from="NavAgent" to="." method="_on_navigation_finished"]
 [connection signal="velocity_computed" from="NavAgent" to="." method="_on_velocity_computed"]
 [connection signal="timeout" from="MoveCheck" to="." method="_on_move_check_timeout"]
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
