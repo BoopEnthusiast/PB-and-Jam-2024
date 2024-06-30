@@ -13,6 +13,8 @@ const DECEL = ACCEL * 1.3
 @onready var paper = $Popup/Paper
 @onready var paper_text = $Popup/Paper/PaperText
 @onready var body_sprite = $Body
+@onready var caught = $Caught
+@onready var timer = $UI/ProgressBar/Timer
 
 var interacting := false
 
@@ -52,3 +54,9 @@ func stop_interacting() -> void:
 	interacting = false
 	phone.visible = false
 	paper.visible = false
+
+
+func increase_time() -> void:
+	caught.play()
+	timer.wait_time = timer.time_left - 10
+	timer.start()

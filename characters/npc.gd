@@ -95,3 +95,9 @@ func _on_action_timer_timeout():
 	doing_thing.visible = false
 	holding_paper = true
 	doing_thing = null
+
+
+func _on_interaction_area_body_entered(body):
+	if body is Player:
+		if body.interacting:
+			body.increase_time()

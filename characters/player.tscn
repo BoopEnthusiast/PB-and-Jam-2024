@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxhu2r4fgpj36"]
+[gd_scene load_steps=9 format=3 uid="uid://bxhu2r4fgpj36"]
 
 [ext_resource type="Script" path="res://characters/Player.gd" id="1_ctjpp"]
 [ext_resource type="Texture2D" uid="uid://bulmbmw153gd8" path="res://resources/sprites/placeholder sprite sheet.png" id="2_2382b"]
 [ext_resource type="Texture2D" uid="uid://cd503qv873xgh" path="res://resources/2d_lights_and_shadows_neutral_point_light.webp" id="2_shlhq"]
+[ext_resource type="AudioStream" uid="uid://dlrcl12mpleg8" path="res://resources/SFX/360469__topschool__gasp.mp3" id="4_ivufw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbe17"]
 size = Vector2(64, 32)
@@ -26,6 +27,8 @@ func _process(delta):
 	value = abs(timer.time_left - 300)
 	if timer.is_stopped():
 		get_tree().change_scene_to_packed(MEETING)
+
+
 "
 
 [node name="Player" type="CharacterBody2D"]
@@ -172,3 +175,6 @@ offset_top = 8.0
 offset_right = 650.0
 offset_bottom = 31.0
 text = "Time until meeting"
+
+[node name="Caught" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ivufw")

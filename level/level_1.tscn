@@ -303,21 +303,30 @@ We think you’d love this video: Plankton farts and dies.
 
 [node name="Paper17" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-2320, 2112)
-text = "Texting app
-Hey, me and the boys are gonna play some Blue Cod tonight at 7:30pm. You keen?
-Yeah, you guys got the Pre-order Chips Map Pack?
+text = "Hey, me and the boys are gonna play some Blue Cod tonight at 7:30pm. You keen?
 "
 
 [node name="Paper18" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-2104, 168)
+text = "Financial Advice:
+Switch to cheaper coffee. Employees won’t notice the difference in taste.
+Publish official cleanliness policies to help reduce cleaning costs.
+Don’t give in to the demands of the IT department. Tech debt is a myth.
+Reduce the budget allocated to customer service. We’ve learned the hard way that the customers are almost never right.
+Replace the marketing department. They keep making bogus claims and we don’t want to be sued because of them.
+Reject more leave applications. We can’t afford to have everyone away every week.
+"
 
 [node name="Paper19" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(2424, 2632)
+text = "Hmm, what should I write here?"
 
 [node name="Paper20" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(1088, 448)
+text = "Ooop maybe there's two pieces of empty paper"
 
 [node name="Paper21" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(-2408, 1416)
+text = "Perhaps, three pieces of empty paper"

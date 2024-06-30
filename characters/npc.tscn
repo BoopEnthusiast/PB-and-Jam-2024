@@ -63,4 +63,5 @@ one_shot = true
 [connection signal="velocity_computed" from="NavAgent" to="." method="_on_velocity_computed"]
 [connection signal="timeout" from="MoveCheck" to="." method="_on_move_check_timeout"]
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="timeout" from="ActionTimer" to="." method="_on_action_timer_timeout"]

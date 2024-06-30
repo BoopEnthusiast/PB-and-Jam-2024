@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://btju6stjgkyhg"]
+[gd_scene load_steps=12 format=3 uid="uid://btju6stjgkyhg"]
 
 [ext_resource type="Script" path="res://meeting/meeting.gd" id="1_nj13y"]
 [ext_resource type="AudioStream" uid="uid://wdx3rohwyxaa" path="res://resources/music/meeting.ogg" id="2_ofhxy"]
+[ext_resource type="Texture2D" uid="uid://c1se68j0kxshq" path="res://resources/sprites/meeting placeholder room.png" id="3_ck76u"]
+[ext_resource type="Texture2D" uid="uid://p0m26047qf6x" path="res://resources/sprites/meeting placeholder characters.png" id="4_8i6ko"]
+[ext_resource type="Texture2D" uid="uid://bws3sxsrt26bm" path="res://resources/sprites/meeting placeholder questions.png" id="5_kskty"]
+[ext_resource type="AudioStream" uid="uid://bmqo2tbvdej40" path="res://resources/SFX/hotel-bell-ding-2-202586.mp3" id="6_a4d17"]
+[ext_resource type="AudioStream" uid="uid://bkrdxf03hangj" path="res://resources/SFX/buzzer-or-wrong-answer-20582.mp3" id="7_pild8"]
 
 [sub_resource type="GDScript" id="GDScript_38g6c"]
 script/source = "extends ProgressBar
@@ -14,6 +19,150 @@ func _process(_delta):
 	value = timer.time_left
 "
 
+[sub_resource type="Animation" id="Animation_opyug"]
+resource_name = "winner"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(506.5, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-81, -0.25, 0, 0.25, 0, 129, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Score:theme_override_font_sizes/font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(41, -0.25, 0, 0.25, 0, 101, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Score:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(355, -0.25, 0, 0.25, 0, 355, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Score:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(108, -0.25, 0, 0.25, 0, 232, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_2d0ok"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(506.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-81, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Score:theme_override_font_sizes/font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Score:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(355, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Score:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(108, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_01jjf"]
+_data = {
+"RESET": SubResource("Animation_2d0ok"),
+"winner": SubResource("Animation_opyug")
+}
+
 [node name="Meeting" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -22,6 +171,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nj13y")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ck76u")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_8i6ko")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_kskty")
+expand_mode = 1
 
 [node name="ButtonHolder" type="Control" parent="."]
 layout_mode = 1
@@ -35,10 +214,11 @@ grow_vertical = 0
 
 [node name="Answer" type="Button" parent="ButtonHolder"]
 layout_mode = 1
+offset_left = 290.0
 offset_top = 70.0
-offset_right = 568.0
-offset_bottom = 126.0
-theme_override_font_sizes/font_size = 26
+offset_right = 563.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 17
 text = "Option 1"
 
 [node name="Answer2" type="Button" parent="ButtonHolder"]
@@ -46,11 +226,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -568.0
+offset_left = -537.0
 offset_top = 70.0
-offset_bottom = 126.0
+offset_right = -264.0
+offset_bottom = 114.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 17
 text = "Option 2"
 
 [node name="Answer3" type="Button" parent="ButtonHolder"]
@@ -58,10 +239,12 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -64.0
-offset_right = 568.0
+offset_left = 290.0
+offset_top = -77.0
+offset_right = 563.0
+offset_bottom = -33.0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 17
 text = "Option 3"
 
 [node name="Answer4" type="Button" parent="ButtonHolder"]
@@ -71,11 +254,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -568.0
-offset_top = -64.0
+offset_left = -537.0
+offset_top = -77.0
+offset_right = -264.0
+offset_bottom = -33.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 17
 text = "Option 4"
 
 [node name="TimeLeft" type="ProgressBar" parent="."]
@@ -84,8 +269,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -208.0
-offset_bottom = -150.0
+offset_left = 346.0
+offset_top = -216.0
+offset_right = -342.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 0)
@@ -100,13 +287,59 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 39
+theme_override_font_sizes/font_size = 18
 text = "Hello this is the question"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="TimeLeft"]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ofhxy")
 autoplay = true
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -221.0
+offset_top = 108.0
+offset_right = 221.0
+offset_bottom = 246.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 0
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="Ding" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_a4d17")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_pild8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_01jjf")
+}
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -69.5
+offset_top = -81.0
+offset_right = 922.5
+offset_bottom = 56.0001
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 0
+text = "You got this out of 12:"
+
+[connection signal="pressed" from="ButtonHolder/Answer" to="." method="_on_answer_pressed"]
+[connection signal="pressed" from="ButtonHolder/Answer2" to="." method="_on_answer_2_pressed"]
+[connection signal="pressed" from="ButtonHolder/Answer3" to="." method="_on_answer_3_pressed"]
+[connection signal="pressed" from="ButtonHolder/Answer4" to="." method="_on_answer_4_pressed"]
