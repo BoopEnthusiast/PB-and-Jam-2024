@@ -4,20 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://bxhu2r4fgpj36" path="res://characters/player.tscn" id="2_v1ojs"]
 [ext_resource type="PackedScene" uid="uid://dfjcyfyvwyent" path="res://characters/npc.tscn" id="3_pr2pk"]
 
-[sub_resource type="Gradient" id="Gradient_hel4l"]
-offsets = PackedFloat32Array(0, 0.783133, 0.933735, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.532297, 0, 0.532297, 1, 0.771084, 0, 0.771084, 1, 1, 0, 1, 1)
+[sub_resource type="Gradient" id="Gradient_ol6o2"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_7njfx"]
-gradient = SubResource("Gradient_hel4l")
-fill_to = Vector2(0.991304, 1)
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hhj4r"]
+gradient = SubResource("Gradient_ol6o2")
 
 [node name="Main" type="Node2D"]
 
 [node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(0.000123024, 2560)
-scale = Vector2(80, 80)
-texture = SubResource("GradientTexture2D_7njfx")
+position = Vector2(9.25064e-05, 2560)
+scale = Vector2(19.625, 5024)
+texture = SubResource("GradientTexture1D_hhj4r")
 
 [node name="Level1" parent="." instance=ExtResource("1_ldu7f")]
 

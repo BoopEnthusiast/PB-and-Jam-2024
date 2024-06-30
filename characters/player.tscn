@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxhu2r4fgpj36"]
+[gd_scene load_steps=7 format=3 uid="uid://bxhu2r4fgpj36"]
 
 [ext_resource type="Script" path="res://characters/Player.gd" id="1_ctjpp"]
 [ext_resource type="Texture2D" uid="uid://cd503qv873xgh" path="res://resources/2d_lights_and_shadows_neutral_point_light.webp" id="2_shlhq"]
@@ -10,6 +10,18 @@ size = Vector2(64, 64)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7mquu"]
 radius = 72.0
+
+[sub_resource type="GDScript" id="GDScript_lysx0"]
+script/source = "extends ProgressBar
+
+
+@onready var timer = $Timer
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	value = abs(timer.time_left - 300)
+"
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -23,6 +35,7 @@ scale = Vector2(64, 64)
 texture = SubResource("PlaceholderTexture2D_f054q")
 
 [node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(0.565, 0.565)
 position_smoothing_enabled = true
 
 [node name="Light" type="PointLight2D" parent="."]
@@ -129,3 +142,27 @@ gsdf
 g 
 dfs jsh kljh gsdf
  "
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="UI"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 1
+max_value = 300.0
+script = SubResource("GDScript_lysx0")
+
+[node name="Timer" type="Timer" parent="UI/ProgressBar"]
+wait_time = 300.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="UI"]
+offset_left = 504.0
+offset_top = 8.0
+offset_right = 650.0
+offset_bottom = 31.0
+text = "Time until meeting"

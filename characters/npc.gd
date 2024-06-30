@@ -4,12 +4,13 @@ class_name NPC extends CharacterBody2D
 const SPEED = 100.0
 
 var ready_to_move := false
-
 var last_position: Vector2
-
 var doing_thing: Node2D
+var holding_paper := false
 
 @onready var nav_agent = $NavAgent
+@onready var wall_there = $WallThere
+@onready var action_timer = $ActionTimer
 
 
 func _ready():
@@ -30,8 +31,6 @@ func _physics_process(_delta):
 	if not ready_to_move:
 		return
 	
-	
-	
 	var current_agent_position: Vector2 = global_position
 	var next_path_position: Vector2 = nav_agent.get_next_path_position()
 	
@@ -40,10 +39,16 @@ func _physics_process(_delta):
 
 
 func _on_navigation_finished():
-	if doing_thing:
-		nav_agent.target_position = doing_thing.global_position
-		return
-	nav_agent.target_position = Singleton.random_point()
+	if ready_to_move:
+		if doing_thing:
+			if not doing_thing.visible:
+				doing_thing.visible = true
+				holding_paper = false
+			else:
+				nav_agent.target_position = doing_thing.global_position
+				action_timer.start(randf_range(15, 35))
+				ready_to_move = false
+		nav_agent.target_position = Singleton.random_point()
 
 
 func _on_velocity_computed(safe_velocity):
@@ -51,16 +56,28 @@ func _on_velocity_computed(safe_velocity):
 
 
 func _on_move_check_timeout():
-	if last_position and last_position.distance_squared_to(global_position) < 500:
+	if last_position and last_position.distance_squared_to(global_position) < 300 and ready_to_move:
 		nav_agent.target_position = Singleton.random_point()
 	last_position = global_position
 
 
-func _on_interaction_area_body_entered(body):
-	pass
-
-
 func _on_interaction_area_area_entered(area):
-	if area is Paper:
-		doing_thing = area
-		nav_agent.target_position = area.global_position
+	if not doing_thing:
+		if area is Paper:
+			if area.visible:
+				wall_there.target_position = to_local(area.global_position)
+				if wall_there.get_collider() is Table:
+					doing_thing = area
+					nav_agent.target_position = area.global_position
+			elif holding_paper:
+				wall_there.target_position = to_local(area.global_position)
+				if wall_there.get_collider() is Table:
+					doing_thing = area
+					nav_agent.target_position = area.global_position
+
+
+func _on_action_timer_timeout():
+	ready_to_move = true
+	doing_thing.visible = false
+	holding_paper = true
+	doing_thing = null

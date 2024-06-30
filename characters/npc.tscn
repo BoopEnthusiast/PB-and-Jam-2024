@@ -11,7 +11,7 @@ light_mode = 2
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_knhqf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t28vq"]
-radius = 96.3328
+radius = 296.108
 
 [node name="NPC" type="CharacterBody2D"]
 motion_mode = 1
@@ -42,8 +42,6 @@ autostart = true
 shape = SubResource("CircleShape2D_t28vq")
 
 [node name="WallThere" type="RayCast2D" parent="."]
-collide_with_areas = true
-collide_with_bodies = false
 
 [node name="ActionTimer" type="Timer" parent="."]
 wait_time = 20.0
@@ -53,4 +51,4 @@ one_shot = true
 [connection signal="velocity_computed" from="NavAgent" to="." method="_on_velocity_computed"]
 [connection signal="timeout" from="MoveCheck" to="." method="_on_move_check_timeout"]
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
-[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="timeout" from="ActionTimer" to="." method="_on_action_timer_timeout"]
