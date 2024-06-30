@@ -19,11 +19,13 @@ script/source = "extends ProgressBar
 
 
 @onready var timer = $Timer
-
+const MEETING = preload(\"res://meeting/meeting.tscn\")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	value = abs(timer.time_left - 300)
+	if timer.is_stopped():
+		get_tree().change_scene_to_packed(MEETING)
 "
 
 [node name="Player" type="CharacterBody2D"]
