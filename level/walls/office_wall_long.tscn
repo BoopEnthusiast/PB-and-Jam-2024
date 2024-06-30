@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://byrlfo2npkw8e"]
+[gd_scene load_steps=5 format=3 uid="uid://byrlfo2npkw8e"]
+
+[ext_resource type="Texture2D" uid="uid://bulmbmw153gd8" path="res://resources/sprites/placeholder sprite sheet.png" id="1_0cs7f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4omri"]
-size = Vector2(5120, 48)
+size = Vector2(5120, 78)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rbg5j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_84i5t"]
+atlas = ExtResource("1_0cs7f")
+region = Rect2(10296.5, 347.782, 353.168, 7837.5)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_phsp0"]
-polygon = PackedVector2Array(-2560, -24, -2560, 24, 2560, 24, 2560, -24)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_slo1x"]
+polygon = PackedVector2Array(96.5, -3881.4, 96.5, -3875.3, 94.9, -3865.5, 100.6, -3698.5, 99.4, -3698.5, 95.6, -3574.5, 96.4, -3574.5, 107.5, -3295.6, 107.5, -3293.5, 104.5, -3165.5, 104.5, -3164.5, 105.5, -2892.5, 106.5, -2892.5, 121.5, -2213.5, 121.5, -2212.5, 128.5, -1381.5, 128.5, -1380.5, 122.5, -863.5, 123.5, -863.5, 130.5, -58.5, 130.5, -57.3, 128.9, -47.5, 129.5, -47.5, 131.5, 168.5, 132.4, 168.5, 136.5, 299.4, 136.5, 300.4, 139.5, 785.5, 140.5, 785.5, 147.5, 1178.5, 147.5, 1179.5, 149.5, 1494.5, 149.5, 1495.5, 147.5, 2123.5, 146.5, 2123.5, 145.5, 2236.5, 144.4, 2236.5, 135.5, 2509.6, 135.5, 2510.6, 131.5, 2757.5, 132.5, 2757.5, 135.5, 2905.5, 134.5, 2905.5, 125.5, 3321.5, 125.5, 3738.5, 126.5, 3738.5, 129.5, 3883.5, 127.6, 3883.5, 123.7, 3890.5, 120.5, 3890.5, 43.5, 3888.6, 43.5, 3889.5, -122.5, 3893.5, -122.5, 3891.6, -125.5, 3889.6, -125.5, 3885.5, -126.5, 3825.5, -127.3, 3825.5, -148.5, 3614.6, -148.5, 3613.5, -153.5, 3512.5, -153.5, 3510.5, -154.5, 3286.5, -155.5, 3286.5, -168.5, 2630.5, -168.5, 2629.5, -167.5, 2083.5, -168.5, 2083.5, -170.5, 1840.5, -169.5, 1840.5, -166.5, 1214.5, -167.5, 1214.5, -169.5, 923.5, -168.5, 923.5, -168.5, 763.5, -167.5, 763.5, -163.5, 529.5, -163.5, -122.5, -162.5, -122.5, -152.5, -988.5, -151.5, -988.5, -139.5, -1638.5, -139.5, -1639.5, -135.5, -2268.5, -134.5, -2268.5, -132.5, -2418.5, -131.4, -2418.5, -120.5, -2698.6, -120.5, -2699.6, -116.5, -2918.6, -116.5, -2919.6, -118.5, -3118.5, -119.4, -3118.5, -129.5, -3365.4, -129.5, -3366.4, -130.5, -3510.5, -131.4, -3510.5, -139.5, -3648.4, -139.5, -3791.5, -138.4, -3791.5, -136.6, -3819.5, -137.7, -3819.5, -141.7, -3827.5, -138.3, -3827.5, -136.5, -3829.3, -136.5, -3837.5, -135.6, -3862.6, -142.8, -3872.3, -141.7, -3874.5, -140.3, -3874.5, -137.3, -3877.5, -129.8, -3877.5, -111.7, -3880.5, -89.5, -3880.5, 34.5, -3883.5, 34.5, -3884.6)
 
 [node name="OfficeWallLong" type="StaticBody2D"]
 
@@ -15,8 +19,12 @@ shape = SubResource("RectangleShape2D_4omri")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(-0.000305176, 0)
-scale = Vector2(5118, 46)
-texture = SubResource("PlaceholderTexture2D_rbg5j")
+rotation = -1.57079
+scale = Vector2(0.335, 0.665)
+texture = SubResource("AtlasTexture_84i5t")
 
-[node name="LightOccluder" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_phsp0")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-0.000305176, 0)
+rotation = -1.57079
+scale = Vector2(0.335, 0.665)
+occluder = SubResource("OccluderPolygon2D_slo1x")

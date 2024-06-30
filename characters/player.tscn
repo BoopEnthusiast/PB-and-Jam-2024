@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxhu2r4fgpj36"]
+[gd_scene load_steps=8 format=3 uid="uid://bxhu2r4fgpj36"]
 
 [ext_resource type="Script" path="res://characters/Player.gd" id="1_ctjpp"]
+[ext_resource type="Texture2D" uid="uid://bulmbmw153gd8" path="res://resources/sprites/placeholder sprite sheet.png" id="2_2382b"]
 [ext_resource type="Texture2D" uid="uid://cd503qv873xgh" path="res://resources/2d_lights_and_shadows_neutral_point_light.webp" id="2_shlhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbe17"]
-size = Vector2(64, 64)
+size = Vector2(64, 32)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f054q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xl7o"]
+atlas = ExtResource("2_2382b")
+region = Rect2(143.117, 461.109, 529.697, 228.531)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7mquu"]
-radius = 72.0
+radius = 96.0
 
 [sub_resource type="GDScript" id="GDScript_lysx0"]
 script/source = "extends ProgressBar
@@ -30,22 +33,23 @@ script = ExtResource("1_ctjpp")
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jbe17")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(64, 64)
-texture = SubResource("PlaceholderTexture2D_f054q")
+[node name="Body" type="Sprite2D" parent="."]
+scale = Vector2(0.18, 0.18)
+texture = SubResource("AtlasTexture_1xl7o")
 
 [node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(0.565, 0.565)
+zoom = Vector2(0.65, 0.65)
 position_smoothing_enabled = true
 
 [node name="Light" type="PointLight2D" parent="."]
 scale = Vector2(5.25, 5.25)
+energy = 0.5
 shadow_enabled = true
 texture = ExtResource("2_shlhq")
 
 [node name="NavObstacle" type="NavigationObstacle2D" parent="."]
 radius = 45.0
-vertices = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+vertices = PackedVector2Array(-32, -16, -32, 16, 32, 16, 32, -16)
 
 [node name="InteractArea" type="Area2D" parent="."]
 

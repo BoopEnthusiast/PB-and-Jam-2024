@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw46yxaggedff"]
+[gd_scene load_steps=5 format=3 uid="uid://bw46yxaggedff"]
+
+[ext_resource type="Texture2D" uid="uid://bulmbmw153gd8" path="res://resources/sprites/placeholder sprite sheet.png" id="1_qbtgg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cdps"]
 size = Vector2(640, 48)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tmun6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hig3q"]
+atlas = ExtResource("1_qbtgg")
+region = Rect2(7817.12, 1381.87, 1927.09, 218.646)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gpwtc"]
-polygon = PackedVector2Array(-320, -24, 320, -24, 320, 24, -320, 24)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n86me"]
+polygon = PackedVector2Array(-943.9, -103, -931.5, -103, -931.5, -102, -191.5, -105, -191.5, -103.9, 108.6, -96, 109.6, -96, 417.5, -98, 417.5, -99, 672.5, -105, 940.5, -105, 940.5, -104, 945.5, -104, 945.5, -102, 949.5, -99, 949.5, -96, 948.5, -8, 949.4, -8, 952.4, 67, 953, 67, 957.2, 81, 954.6, 81, 950.6, 87, 945.4, 87, 943.4, 84, 923.5, 84, 766.5, 85, 766.5, 85.9, 476.6, 95, 474.6, 95, 93.5, 95.1, 93.5, 94, -657.5, 89, -657.5, 90, -920.5, 94, -920.5, 95, -939.5, 95, -939.5, 97.4, -949.5, 100.8, -949.5, 97.7, -953.5, 92.7, -953.5, 86, -957.5, -16, -957.5, -17, -954.5, -87, -954.5, -87.6, -956.9, -100, -954.7, -100, -952.5, -104.5, -952.5, -106.2, -950.4, -107.3)
 
 [node name="OfficeWallShort" type="StaticBody2D"]
 
@@ -15,8 +19,10 @@ shape = SubResource("RectangleShape2D_2cdps")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(-2.3365e-05, 1.66893e-06)
-scale = Vector2(638, 46)
-texture = SubResource("PlaceholderTexture2D_tmun6")
+scale = Vector2(0.335, 0.335)
+texture = SubResource("AtlasTexture_hig3q")
 
-[node name="LightOccluder" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_gpwtc")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-2.3365e-05, 1.66893e-06)
+scale = Vector2(0.335, 0.335)
+occluder = SubResource("OccluderPolygon2D_n86me")

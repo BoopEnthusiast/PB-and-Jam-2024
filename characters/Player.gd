@@ -12,6 +12,7 @@ const DECEL = ACCEL * 1.3
 @onready var phone_text = $Popup/Phone/PhoneText
 @onready var paper = $Popup/Paper
 @onready var paper_text = $Popup/Paper/PaperText
+@onready var body_sprite = $Body
 
 var interacting := false
 
@@ -43,6 +44,8 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, DECEL * delta)
 	
 	move_and_slide()
+	
+	body_sprite.rotation = rotate_toward(body_sprite.rotation, velocity.angle() - PI / 2, 0.05)
 
 
 func stop_interacting() -> void:

@@ -1,35 +1,47 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfjcyfyvwyent"]
+[gd_scene load_steps=8 format=3 uid="uid://dfjcyfyvwyent"]
 
 [ext_resource type="Script" path="res://characters/npc.gd" id="1_ocuyg"]
+[ext_resource type="Texture2D" uid="uid://bulmbmw153gd8" path="res://resources/sprites/placeholder sprite sheet.png" id="2_ltb3k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvubd"]
-size = Vector2(48, 48)
+[sub_resource type="CircleShape2D" id="CircleShape2D_3x1cd"]
+radius = 24.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g35gc"]
-light_mode = 2
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_knhqf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm0ho"]
+atlas = ExtResource("2_ltb3k")
+region = Rect2(1329.46, 705.097, 456.585, 276.523)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vtmd"]
+atlas = ExtResource("2_ltb3k")
+region = Rect2(1322.62, 381.383, 352.718, 323.487)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t28vq"]
 radius = 296.108
 
 [node name="NPC" type="CharacterBody2D"]
+rotation = -1.5708
 motion_mode = 1
 script = ExtResource("1_ocuyg")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_vvubd")
+rotation = 1.57079
+shape = SubResource("CircleShape2D_3x1cd")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Body" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_g35gc")
-scale = Vector2(48, 48)
-texture = SubResource("PlaceholderTexture2D_knhqf")
+scale = Vector2(0.18, 0.18)
+texture = SubResource("AtlasTexture_cm0ho")
+
+[node name="Head" type="Sprite2D" parent="."]
+scale = Vector2(0.18, 0.18)
+texture = SubResource("AtlasTexture_8vtmd")
 
 [node name="NavAgent" type="NavigationAgent2D" parent="."]
 path_desired_distance = 5.0
 target_desired_distance = 2.5
 avoidance_enabled = true
-radius = 35.0
+radius = 60.0
 max_speed = 125.0
 
 [node name="MoveCheck" type="Timer" parent="."]

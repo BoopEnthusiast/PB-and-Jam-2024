@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxgq3fwh2xlx8"]
+[gd_scene load_steps=5 format=3 uid="uid://cxgq3fwh2xlx8"]
+
+[ext_resource type="Texture2D" uid="uid://bulmbmw153gd8" path="res://resources/sprites/placeholder sprite sheet.png" id="1_a8q2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4okvd"]
-size = Vector2(640, 16)
+size = Vector2(640, 58)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cua6q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbcwi"]
+atlas = ExtResource("1_a8q2q")
+region = Rect2(7823.15, 1382.03, 1916.56, 200.854)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_asqai"]
-polygon = PackedVector2Array(-320, -8, -320, 8, 320, 8, 320, -8)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_872sx"]
+polygon = PackedVector2Array(-944.4, -95, -932, -95, -932, -94, -192, -97, -192, -95.9, 108.1, -88, 109.1, -88, 417, -90, 417, -91, 672, -97, 940, -97, 940, -96, 945, -96, 945, -94, 949, -91, 949, -88, 948, 0, 948.9, 0, 951.9, 75, 952.5, 75, 956.7, 89, 954.1, 89, 950.1, 95, 944.9, 95, 942.9, 92, 923, 92, 766, 93, 766, 93.9, 580.8, 100, -166.8, 100, -658, 97, -658, 98, -806, 100, -954, 100, -954, 94, -958, -18, -957, -18, -957, -92, -955.2, -92, -953, -96.5, -953, -98.2, -950.9, -99.3)
 
 [node name="CubicleWall" type="StaticBody2D"]
 
@@ -15,8 +19,10 @@ shape = SubResource("RectangleShape2D_4okvd")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(1.85967e-05, -2.68221e-07)
-scale = Vector2(638, 14)
-texture = SubResource("PlaceholderTexture2D_cua6q")
+scale = Vector2(0.335, 0.335)
+texture = SubResource("AtlasTexture_xbcwi")
 
-[node name="LightOccluder" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_asqai")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(1.85967e-05, -2.68221e-07)
+scale = Vector2(0.335, 0.335)
+occluder = SubResource("OccluderPolygon2D_872sx")

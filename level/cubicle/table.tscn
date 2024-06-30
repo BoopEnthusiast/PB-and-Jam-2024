@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://n02ib1jxpfgg"]
+[gd_scene load_steps=5 format=3 uid="uid://n02ib1jxpfgg"]
 
 [ext_resource type="Script" path="res://level/cubicle/table.gd" id="1_8kp37"]
+[ext_resource type="Texture2D" uid="uid://bulmbmw153gd8" path="res://resources/sprites/placeholder sprite sheet.png" id="2_img4j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c28sn"]
-size = Vector2(512, 192)
+size = Vector2(448, 192)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h2bud"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vx4x"]
+atlas = ExtResource("2_img4j")
+region = Rect2(231.877, 3566.79, 1355.71, 615.196)
 
 [node name="Table" type="StaticBody2D"]
 script = ExtResource("1_8kp37")
@@ -14,5 +17,5 @@ script = ExtResource("1_8kp37")
 shape = SubResource("RectangleShape2D_c28sn")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(512, 192)
-texture = SubResource("PlaceholderTexture2D_h2bud")
+scale = Vector2(0.335, 0.335)
+texture = SubResource("AtlasTexture_2vx4x")

@@ -2,18 +2,28 @@ class_name NPC extends CharacterBody2D
 
 
 const SPEED = 100.0
+const TURN_SPEED = PI
 
 var ready_to_move := false
 var last_position: Vector2
 var doing_thing: Node2D
 var holding_paper := false
+var body_x: Array[float] = [2334.242, 1805.482, 1329.457]
+var head_x: Array[float] = [2535.604, 2204.204, 1632.709, 1331.534]
 
 @onready var nav_agent = $NavAgent
 @onready var wall_there = $WallThere
 @onready var action_timer = $ActionTimer
+@onready var body_sprite = $Body
+@onready var head_sprite = $Head
 
 
 func _ready():
+	body_sprite.texture = body_sprite.texture.duplicate()
+	head_sprite.texture = head_sprite.texture.duplicate()
+	body_sprite.texture.region.position.x = body_x.pick_random()
+	head_sprite.texture.region.position.x = head_x.pick_random()
+	
 	# Make sure to not await during _ready.
 	call_deferred("actor_setup")
 
@@ -36,6 +46,10 @@ func _physics_process(_delta):
 	
 	nav_agent.velocity = current_agent_position.direction_to(next_path_position) * SPEED
 	move_and_slide()
+	
+	
+	body_sprite.rotation = rotate_toward(body_sprite.rotation, velocity.angle(), 0.05)
+	head_sprite.rotation = rotate_toward(head_sprite.rotation, velocity.angle(), 0.07)
 
 
 func _on_navigation_finished():

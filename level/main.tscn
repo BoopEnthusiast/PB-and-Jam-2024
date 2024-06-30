@@ -24,7 +24,7 @@ texture = SubResource("GradientTexture1D_hhj4r")
 position = Vector2(374, 429)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.525101, 0.525101, 0.525101, 1)
+color = Color(0.617455, 0.617455, 0.617455, 1)
 
 [node name="NPCs" type="Node2D" parent="."]
 
@@ -50,7 +50,7 @@ position = Vector2(-2024, 1280)
 position = Vector2(1456, 2160)
 
 [node name="NPC8" parent="NPCs" instance=ExtResource("3_pr2pk")]
-position = Vector2(1992, 1376)
+position = Vector2(2176, 1216)
 
 [node name="NPC9" parent="NPCs" instance=ExtResource("3_pr2pk")]
 position = Vector2(2312, 3552)

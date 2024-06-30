@@ -22,6 +22,7 @@ Singleton="*res://global/singleton.gd"
 [display]
 
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=2
 
 [editor]
 
