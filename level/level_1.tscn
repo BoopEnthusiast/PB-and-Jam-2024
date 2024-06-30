@@ -160,60 +160,153 @@ rotation = 1.57079
 
 [node name="Paper" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-40, 2872)
+text = "CV
+Johanna Thompson
+23 Homer Crescent, Karori, Wellington 6012
+
+I’m looking to work my way up to a senior management position. I’m passionate about the gaming industry and want to see it thrive in Wellington.
+
+Work history:
+
+Manager - Tyrannosaurus Studios
+2022 - present
+
+Senior Artist - Leviathan Productions
+2017 - 2022
+"
 
 [node name="Paper2" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(856, 2160)
+text = "Leave application form
+Name: Ivan Hyun
+Number of days requested off: 4
+Date range: 24/06/24 to 27/06/24
+Reason for leave: I’m looking to go on holiday to Gisbourne and the Coromandel Peninsula for the first time. I hear it’s beautiful up there.
+"
 
 [node name="Paper3" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(848, 3120)
+text = "Invoice drafted to: Ruse Co. Ltd.
+Goods listed: Switcheroo 2 developer kit
+Quantity: 5x
+Cost of goods (GST inclusive): $3,250
+Shipping costs: $190 (3 days priority shipping)
+Total: $3,440
+
+Please pay the due amount into the client's bank account by the end of the month.
+"
 
 [node name="Paper4" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-1304, 1464)
+text = "Official Cleanliness Policy:
+Absolutely NO animals in the building! NO EXCEPTIONS!
+(I know who’s been letting that cat in)
+DO NOT put tinned tuna in the microwave. We don’t want any more giant messes to clean up in the kitchen. 
+Take care around important documents when drinking coffee. They’re NOT napkins.
+"
 
 [node name="Paper5" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(872, 1032)
+text = "Features for ConnectedUp Deluxe:
+Same features as ConnectedUp (even the ads)
+Cool shiny badge for Deluxe users (absolutely useless otherwise)
+Higher audio bitrate (we can’t even hear the difference)
+
+
+ConnectedUp issue list:
+Logo fails to display on mobile
+Massive tech debt in backend (4 months remaining)
+Change frontend framework yet again
+Fix the intern’s garbage code
+"
 
 [node name="Paper6" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-1304, 4048)
+text = "Stock price history for 20XX financial year:
+Quarter 1 - $0.69 per stock
+Quarter 2 - $0.80 per stock
+Quarter 3 - $0.79 per stock
+"
 
 [node name="Paper7" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(1056, 4352)
+text = "Subject: Experience our new and improved ConnectedUp!
+Hi John, we’d like to offer you a trial for ConnectedUp Deluxe. It’s valued at 99 dollars per month! Don’t miss out!
+"
 
 [node name="Paper8" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-1276, 3632)
+text = "Subject: I can’t believe we suck at mobile dev
+The logo for our company is still having issues displaying on mobile devices. I’d like to escalate this further with your management. I’m disappointed by the inadequate service I’ve received so far.
+"
 
 [node name="Paper9" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(1064, 1536)
+text = "Subject: Re: senior producer inquiry
+Hi Sarah. We’re contacting you as you’ve previously inquired about a senior producer role that we are currently recruiting. Your resume looks incredible and we’d love to have you on-board. Please reply if you are still interested.
+"
 
 [node name="Paper10" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(2424, 1312)
+text = "Texting app
+Did you feed the cat this morning?
+There’s a cat?
+You didn’t know? It’s the black one wandering around the place.
+But we’re not supposed to have animals in here…
+"
 
 [node name="Paper11" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(2064, 1648)
+text = "Texting app
+Our company’s stocks are currently down by approximately 0.9%, compared to last quarter. I’d like to have a meeting with you about what we can do to make our shareholders more confident. 
+"
 
 [node name="Paper12" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(2424, 3728)
+text = "Subject: Enquiry via The Artist Terminal
+(This email was automatically sent to the junk mail folder. Links and attachments have been disabled for your protection)
+Hello. I love the artwork you’ve created and I was wondering if I could purchase some of your artwork. Regards.
+"
 
 [node name="Paper13" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(1352, 4968)
+text = "Phaselook Marketplace
+Hi, is this item still available?
+"
 
 [node name="Paper14" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-856, 4952)
+text = "Messenger
+Do we have enough tinned tomatoes for tonight’s casserole?
+
+Notification
+This week’s TuneJam New Releases are here. Listen to Whale Song Redux, Title Screen (Lasagna Time) and more.
+"
 
 [node name="Paper15" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(-2376, 4000)
+text = "Subject: Your listing
+Hi tomcatfoolery. Your listing for Dance Off 2013 closed and did not sell.
+"
 
 [node name="Paper16" parent="Interactables" instance=ExtResource("5_et26d")]
 visible = false
 position = Vector2(-2392, 3104)
+text = "Notification
+We think you’d love this video: Plankton farts and dies.
+"
 
 [node name="Paper17" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-2320, 2112)
+text = "Texting app
+Hey, me and the boys are gonna play some Blue Cod tonight at 7:30pm. You keen?
+Yeah, you guys got the Pre-order Chips Map Pack?
+"
 
 [node name="Paper18" parent="Interactables" instance=ExtResource("5_et26d")]
 position = Vector2(-2104, 168)

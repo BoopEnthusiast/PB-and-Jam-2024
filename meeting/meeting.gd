@@ -34,4 +34,19 @@ func next_question() -> void:
 	answer_2.text = answers[current_question * 4 + 1]
 	answer_3.text = answers[current_question * 4 + 2]
 	answer_4.text = answers[current_question * 4 + 3]
-	current_question += 1
+
+
+func _on_answer_pressed():
+	
+
+
+func _on_answer_2_pressed():
+	pass # Replace with function body.
+
+
+func _on_answer_3_pressed():
+	pass # Replace with function body.
+
+
+func _on_answer_4_pressed():
+	pass # Replace with function body.
